@@ -1,3 +1,5 @@
+// gcc -o wait.exe wait.c
+// ./wait.exe
 #include<stdio.h> 
 #include<stdlib.h> 
 #include<sys/wait.h> 
@@ -20,6 +22,8 @@ void waitexample()
 
         if (WIFEXITED(stat)) 
             printf("Exit status: %d\n", WEXITSTATUS(stat)); 
+		else if (WIFSIGNALED(stat)) 
+		    psignal(WTERMSIG(stat), "Exit signal");
 } 
 
 // Driver code 
