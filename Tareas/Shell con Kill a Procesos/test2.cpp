@@ -1,6 +1,4 @@
-//g++ -Wall test2.cpp -lreadline -o test2.exe
 
-//g++ -std=c++11 test2.cpp -lreadline -o test2.exe
 
 #include <iostream>
 #include <stdlib.h>
